@@ -11,9 +11,9 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
 
-     public function index()
+    public function index()
     {
-        $users = User::all();
+        $users = User::with('role')->get();
         // dd($users);
         return response()->json(['users' => $users], 200);
     }
@@ -24,7 +24,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'role_id' =>'required',
+            'role_id' => 'required',
             'name' => 'required',
             'nip' => 'required',
             'email' => 'required|email|unique:users,email',
@@ -52,7 +52,7 @@ class UserController extends Controller
     {
         $user = User::find($userId);
 
-        if(!$user) {
+        if (!$user) {
             return response()->json(['message' => 'Pengguna tidak ditemukan'], 404);
         }
 
@@ -66,7 +66,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        if(!$user) {
+        if (!$user) {
             return response()->json(['message' => 'Pengguna tidak ditemukan'], 404);
         }
 
@@ -84,7 +84,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
 
-        if(!$user) {
+        if (!$user) {
             return response()->json(['message' => 'Pengguna tidak ditemukan'], 404);
         }
 

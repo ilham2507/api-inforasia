@@ -14,12 +14,12 @@ class User extends Authenticatable
 
     protected $guarded = ['id'];
 
-    public function role ()
+    public function role()
     {
-        return $this->belongsTo(role::class, 'foreign_key');
+        return $this->belongsTo(role::class, 'role_id');
     }
 
-    public function proyek ()
+    public function proyek()
     {
         return $this->hasMany(proyek::class);
     }
