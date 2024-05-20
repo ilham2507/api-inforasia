@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -34,12 +35,27 @@ class UserController extends Controller
             'tanggal_lahir' => 'required',
             'no_telp' => 'required',
             'alamat' => 'required',
-            'remember_token' => 'required',
-            'foto_profile' => 'required|file',
-
+            // 'remember_token' => 'required',
+            'foto_profile' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $user = User::create($request->all());
+        $fileNameImage = time() . '.' . $request->foto_profile->extension();
+        $request->foto_profile->move(public_path('foto/'), $fileNameImage);
+
+        $user = User::create([
+            'role_id' => $request->role_id,
+            'name' => $request->name,
+            'nip' => $request->nip,
+            'email' => $request->email,
+            'username' => $request->username,
+            'password' => Hash::make($request->password),
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'tanggal_lahir' => $request->tanggal_lahir,
+            'no_telp' => $request->no_telp,
+            'alamat' => $request->alamat,
+            'foto_profile' => $fileNameImage,
+        ]);
+
         $user->save();
 
         return response()->json(['message' => 'Pengguna berhasil disimpan', 'user' => $user], 201);
