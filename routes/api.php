@@ -41,7 +41,7 @@ Route::get('/aktif', [authentication::class, 'aktif'])->middleware(['auth:sanctu
 Route::get('/users', [UserController::class, 'index'])->middleware(['auth:sanctum']);
 Route::get('/users/{id}', [UserController::class, 'show'])->middleware(['auth:sanctum']);
 Route::post('/users', [UserController::class, 'store'])->middleware(['auth:sanctum']);
-Route::put('/users/{id}', [UserController::class, 'update'])->middleware(['auth:sanctum']);
+Route::post('/users/{id}', [UserController::class, 'update'])->middleware(['auth:sanctum']);
 Route::delete('/users/{id}', [UserController::class, 'destroy'])->middleware(['auth:sanctum']);
 
 // proyek api

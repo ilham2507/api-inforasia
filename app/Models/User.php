@@ -44,6 +44,9 @@ class User extends Authenticatable
         'tanggal_lahir',
         'no_telp',
         'alamat',
+        'role_id',
+        'remember_token',
+        'email_verified_at',
         'foto_profile',
     ];
 

@@ -6,6 +6,7 @@ use App\Helpers\ApiFormatter;
 use App\Models\proyek;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 
 class ProyekController extends Controller
 {
@@ -15,14 +16,17 @@ class ProyekController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-    $data = proyek::where('user_id', $user->id)->get();
+        $user = FacadesAuth::user();
+        $data = proyek::where('user_id', $user->id)->get();
 
-    if ($data->isNotEmpty()) {
-        return ApiFormatter::createApi(200, true, $data);
-    } else {
-        return ApiFormatter::createApi(400, false);
-    }
+        return response()->json(['proyek' => $data]);
+        // if ($data->isNotEmpty()) {
+        //     // return ApiFormatter::createApi(200, true, $data);
+        //     return response()->json(['proyek' => $data], 200);
+        // } else {
+        //     // return ApiFormatter::createApi(400, false);
+        //     return response()->json(['message' => $data]);
+        // }
     }
 
     /**
@@ -36,7 +40,7 @@ class ProyekController extends Controller
             'detail' => 'required',
             'manager' => 'required',
             'team' => 'required',
-            'file' => 'required|file',
+            // 'file' => 'required|file',
             'nilai' => 'required',
             'start' => 'required|date',
             'finish' => 'required|date'
@@ -55,7 +59,7 @@ class ProyekController extends Controller
     {
         $proyek = proyek::find($id);
 
-        if(!$proyek) {
+        if (!$proyek) {
             return response()->json(['message' => 'Proyek tidak ditemukan'], 404);
         }
 
@@ -69,7 +73,7 @@ class ProyekController extends Controller
     {
         $proyek = proyek::find($id);
 
-        if(!$proyek) {
+        if (!$proyek) {
             return response()->json(['message' => 'Proyek tidak ditemukan'], 404);
         }
         $proyek->fill($request->all());
@@ -88,7 +92,7 @@ class ProyekController extends Controller
     {
         $proyek = proyek::find($id);
 
-        if(!$proyek) {
+        if (!$proyek) {
             return response()->json(['message' => 'Proyek tidak ditemukan'], 404);
         }
 

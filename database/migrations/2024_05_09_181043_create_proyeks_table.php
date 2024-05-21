@@ -18,10 +18,11 @@ return new class extends Migration
             $table->longText('detail');
             $table->string('manager');
             $table->string('team');
-            $table->string('file');
+            $table->string('file')->nullable();
             $table->date('start');
             $table->date('finish');
             $table->integer('nilai');
+            $table->string('klien');
 
             $table->timestamps();
         });
