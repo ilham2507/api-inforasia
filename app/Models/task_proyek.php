@@ -11,8 +11,8 @@ class task_proyek extends Model
 
     protected $guarded = ['id'];
 
-    public function proyek()
+    public function penerimaProyek()
     {
-        return $this->belongsTo(proyek::class);
+        return $this->hasMany(penerima_proyek::class);
     }
 }

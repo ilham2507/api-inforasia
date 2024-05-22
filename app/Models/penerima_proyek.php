@@ -16,8 +16,8 @@ class penerima_proyek extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function proyek()
+    public function taskProyek()
     {
-        return $this->belongsTo(proyek::class);
+        return $this->belongsTo(task_proyek::class, 'task_proyek_id');
     }
 }

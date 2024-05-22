@@ -14,15 +14,15 @@ return new class extends Migration
         Schema::create('task_proyeks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('proyek_id')->references('id')->on('proyeks')->onDelete('cascade');
-            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('penerimaProyek_id')->references('id')->on('penerima_proyeks')->onDelete('cascade');
-            $table->string('tugas');
-            $table->longText('catatan');
-            $table->string('pekerja');
-            $table->date('start');
-            $table->date('deadline');
-            $table->string('status');
-            $table->integer('nilai');
+            // $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->foreignId('penerimaProyek_id')->references('id')->on('penerima_proyeks')->onDelete('cascade')->nullable();
+            $table->string('tugas')->nullable();
+            $table->longText('catatan')->nullable();
+            $table->string('pekerja')->nullable();
+            $table->date('start')->nullable();
+            $table->date('deadline')->nullable();
+            $table->string('status')->nullable();
+            $table->integer('nilai')->nullable();
 
             $table->timestamps();
         });

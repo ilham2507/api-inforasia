@@ -41,22 +41,25 @@ Route::get('/aktif', [authentication::class, 'aktif'])->middleware(['auth:sanctu
 Route::get('/users', [UserController::class, 'index'])->middleware(['auth:sanctum']);
 Route::get('/users/{id}', [UserController::class, 'show'])->middleware(['auth:sanctum']);
 Route::post('/users', [UserController::class, 'store'])->middleware(['auth:sanctum']);
-Route::post('/users/{id}', [UserController::class, 'update'])->middleware(['auth:sanctum']);
-Route::delete('/users/{id}', [UserController::class, 'destroy'])->middleware(['auth:sanctum']);
+Route::post('/users-update/{id}', [UserController::class, 'update'])->middleware(['auth:sanctum']);
+Route::post('/users-delete/{id}', [UserController::class, 'destroy'])->middleware(['auth:sanctum']);
 
 // proyek api
 Route::get('/proyeks', [ProyekController::class, 'index'])->middleware(['auth:sanctum']);
+Route::get('/recent', [ProyekController::class, 'recent'])->middleware(['auth:sanctum']);
 Route::get('/proyeks/{id}', [ProyekController::class, 'show'])->middleware(['auth:sanctum']);
 Route::post('/proyeks', [ProyekController::class, 'store'])->middleware(['auth:sanctum']);
-Route::put('/proyeks/{id}', [ProyekController::class, 'update'])->middleware(['auth:sanctum']);
-Route::delete('/proyeks/{id}', [ProyekController::class, 'destroy'])->middleware(['auth:sanctum']);
+Route::get('/proyeks-count', [ProyekController::class, 'getProyek'])->middleware(['auth:sanctum']);
+Route::get('/proyeks-chart', [ProyekController::class, 'getProyekChart'])->middleware(['auth:sanctum']);
+Route::post('/proyeks-update/{id}', [ProyekController::class, 'update'])->middleware(['auth:sanctum']);
+Route::post('/proyeks-delete/{id}', [ProyekController::class, 'destroy'])->middleware(['auth:sanctum']);
 
 // task Proyek API
 Route::get('/tasks', [TaskProyekController::class, 'index'])->middleware(['auth:sanctum']);
 Route::get('/tasks/{id}', [TaskProyekController::class, 'show'])->middleware(['auth:sanctum']);
 Route::post('/tasks', [TaskProyekController::class, 'store'])->middleware(['auth:sanctum']);
-Route::put('/tasks/{id}', [TaskProyekController::class, 'update'])->middleware(['auth:sanctum']);
-Route::delete('/tasks/{id}', [TaskProyekController::class, 'destroy'])->middleware(['auth:sanctum']);
+Route::post('/tasks-update/{id}', [TaskProyekController::class, 'update'])->middleware(['auth:sanctum']);
+Route::post('/tasks-delete/{id}', [TaskProyekController::class, 'destroy'])->middleware(['auth:sanctum']);
 
 //penerima Proyek API
 Route::get('/penerima-proyeks', [PenerimaProyekController::class, 'index'])->middleware(['auth:sanctum']);

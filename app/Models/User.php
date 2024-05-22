@@ -24,6 +24,11 @@ class User extends Authenticatable
         return $this->hasMany(proyek::class);
     }
 
+    public function taskProyek()
+    {
+        return $this->hasMany(task_proyek::class);
+    }
+
     public function penerimaProyek()
     {
         return $this->hasMany(penerima_proyek::class);

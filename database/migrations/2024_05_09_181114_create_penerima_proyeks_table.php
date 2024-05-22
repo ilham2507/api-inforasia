@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('penerima_proyeks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignId('proyek_id')->references('id')->on('proyeks')->onDelete('cascade');
-            $table->string('nama_penerima');
+            $table->foreignId('task_proyek_id')->references('id')->on('task_proyeks')->onDelete('cascade');
+            // $table->string('nama_penerima');
             $table->timestamps();
         });
     }

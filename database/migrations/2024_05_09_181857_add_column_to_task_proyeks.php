@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function down(): void
     {
         Schema::table('task_proyeks', function (Blueprint $table) {
             $table->dropForeign('task_proyeks_proyek_id_foreign');
@@ -19,7 +19,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function up(): void
     {
         Schema::table('task_proyeks', function (Blueprint $table) {
             $table->foreign('proyek_id')->references('id')->on('proyeks');

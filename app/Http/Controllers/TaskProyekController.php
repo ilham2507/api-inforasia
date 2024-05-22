@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\penerima_proyek;
 use App\Models\task_proyek;
 use Illuminate\Http\Request;
 
 class TaskProyekController extends Controller
 {
-   /**
+    /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
@@ -15,7 +16,7 @@ class TaskProyekController extends Controller
         $proyek_id = $request->query('proyek_id');
 
         if ($proyek_id) {
-            $tasks = task_proyek::where('proyek_id', $proyek_id)->get();
+            $tasks = task_proyek::with('user')->where('proyek_id', $proyek_id)->get();
         } else {
             $tasks = task_proyek::all();
         }
@@ -30,19 +31,33 @@ class TaskProyekController extends Controller
     {
         $request->validate([
             'proyek_id' => 'required',
-            'user_id' => 'required',
-            'penerimaProyek_id' => 'required',
+            'user_ids' => 'required|array',
+            'user_ids.*' => 'exists:users,id',
             'tugas' => 'required',
             'catatan' => 'required',
-            'pekerja' => 'required',
             'start' => 'required',
             'deadline' => 'required',
             'status' => 'required',
             'nilai' => 'required'
-
         ]);
 
-        $task = task_proyek::create($request->all());
+        $task = task_proyek::create([
+            'proyek_id' => $request->proyek_id,
+            'tugas' => $request->tugas,
+            'catatan' => $request->catatan,
+            'start' => $request->start,
+            'deadline' => $request->deadline,
+            'status' => $request->status,
+            'nilai' => $request->nilai,
+        ]);
+
+        $taskProyeks = [];
+        foreach ($request->input('user_ids') as $userId) {
+            $taskProyeks[] = penerima_proyek::create([
+                'task_proyek_id' => $task->id,
+                'user_id' => $userId,
+            ]);
+        }
 
         return response()->json(['message' => 'Task proyek berhasil disimpan', 'task' => $task], 201);
     }
@@ -52,9 +67,9 @@ class TaskProyekController extends Controller
      */
     public function show(string $id)
     {
-        $task = task_proyek::find($id);
+        $task = task_proyek::with('penerimaProyek')->find($id);
 
-        if(!$task) {
+        if (!$task) {
             return response()->json(['message' => 'Task proyek tidak ditemukan'], 404);
         }
 
@@ -68,13 +83,38 @@ class TaskProyekController extends Controller
     {
         $task = task_proyek::find($id);
 
-        if(!$task) {
-            return response()->json(['message' => 'Task proyek tidak ditemukan'], 404);
-        }
+        $request->validate([
+            'proyek_id' => 'required',
+            'user_ids' => 'required|array',
+            'user_ids.*' => 'exists:users,id',
+            'tugas' => 'required',
+            'catatan' => 'required',
+            'start' => 'required|date',
+            'deadline' => 'required|date',
+            'status' => 'required',
+            'nilai' => 'required'
+        ]);
 
-        $task->fill($request->all());
-        $task->updated_at = now(); // Atur updated_at secara manual
-        $task->save();
+        $task->update([
+            'proyek_id' => $request->proyek_id,
+            'tugas' => $request->tugas,
+            'catatan' => $request->catatan,
+            'start' => $request->start,
+            'deadline' => $request->deadline,
+            'status' => $request->status,
+            'nilai' => $request->nilai,
+        ]);
+
+        // Delete existing penerima_proyek records for the task
+        penerima_proyek::where('task_proyek_id', $task->id)->delete();
+
+        // Add new penerima_proyek records
+        foreach ($request->input('user_ids') as $userId) {
+            penerima_proyek::create([
+                'task_proyek_id' => $task->id,
+                'user_id' => $userId,
+            ]);
+        }
 
         return response()->json(['message' => 'Task proyek berhasil diperbarui', 'task' => $task], 200);
     }
@@ -86,7 +126,7 @@ class TaskProyekController extends Controller
     {
         $task = task_proyek::find($id);
 
-        if(!$task) {
+        if (!$task) {
             return response()->json(['message' => 'Task proyek tidak ditemukan'], 404);
         }
 
