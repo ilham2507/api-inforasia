@@ -39,6 +39,7 @@ Route::get('/aktif', [authentication::class, 'aktif'])->middleware(['auth:sanctu
 
 //user API
 Route::get('/users', [UserController::class, 'index'])->middleware(['auth:sanctum']);
+Route::get('/users-manager', [UserController::class, 'getManager'])->middleware(['auth:sanctum']);
 Route::get('/users/{id}', [UserController::class, 'show'])->middleware(['auth:sanctum']);
 Route::post('/users', [UserController::class, 'store'])->middleware(['auth:sanctum']);
 Route::post('/users-update/{id}', [UserController::class, 'update'])->middleware(['auth:sanctum']);

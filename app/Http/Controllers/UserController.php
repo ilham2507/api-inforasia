@@ -23,6 +23,14 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+    public function getManager()
+    {
+        $user = User::where('role_id', 3)->OrderByDesc('id')->get();
+
+        return response()->json(['users' => $user], 200);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
