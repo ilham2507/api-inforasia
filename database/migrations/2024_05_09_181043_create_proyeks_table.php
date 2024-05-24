@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('nama');
             $table->longText('detail');
             $table->string('manager');
-            // $table->string('team');
             $table->string('file')->nullable();
             $table->date('start');
             $table->date('finish');

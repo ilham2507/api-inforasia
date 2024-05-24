@@ -18,13 +18,11 @@ class ProyekController extends Controller
     public function index()
     {
         $user = FacadesAuth::user();
-        if ($user->role->name == 'karyawan') {
-            $data = proyek::whereHas('taskProyek.penerimaProyek', function ($query) use ($user) {
+        $data = Proyek::where('user_id', $user->id)
+            ->orWhereHas('taskProyek.penerimaProyek', function ($query) use ($user) {
                 $query->where('user_id', $user->id);
-            })->get();
-        } else {
-            $data = proyek::all();
-        }
+            })
+            ->get();
 
         return response()->json(['proyek' => $data]);
     }
@@ -93,7 +91,7 @@ class ProyekController extends Controller
      */
     public function show(string $id)
     {
-        $proyek = proyek::with(['taskProyek', 'taskProyek.penerimaProyek.user'])->find($id);
+        $proyek = proyek::with(['user', 'taskProyek', 'taskProyek.penerimaProyek.user'])->find($id);
 
         if (!$proyek) {
             return response()->json(['message' => 'Proyek tidak ditemukan'], 404);
