@@ -14339,3 +14339,493 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
+[2024-05-27 00:58:47] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 00:58:50] local.ERROR: The "--columns" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--columns\" option does not exist. at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php:223)
+[stacktrace]
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php(150): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('columns', 'uri,name,action...')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php(85): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--columns=uri,n...')
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('--columns=uri,n...', true)
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\Input.php(56): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\RouteListCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2024-05-27 00:58:53] local.ERROR: The "--columns" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--columns\" option does not exist. at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php:223)
+[stacktrace]
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php(150): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('columns', 'uri,name,action...')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php(85): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--columns=uri,n...')
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\ArgvInput.php(74): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('--columns=uri,n...', true)
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Input\\Input.php(56): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Command\\Command.php(285): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\RouteListCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
+[2024-05-27 01:08:29] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 01:10:17] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `inforasia`.`task_proyeks` (errno: 150 "Foreign key constraint is incorrectly formed") (Connection: mysql, SQL: alter table `task_proyeks` add constraint `task_proyeks_proyek_id_foreign` foreign key (`proyek_id`) references `proyeks` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `inforasia`.`task_proyeks` (errno: 150 \"Foreign key constraint is incorrectly formed\") (Connection: mysql, SQL: alter table `task_proyeks` add constraint `task_proyeks_proyek_id_foreign` foreign key (`proyek_id`) references `proyeks` (`id`) on delete cascade) at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:829)
+[stacktrace]
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('alter table `ta...', Array, Object(Closure))
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(576): Illuminate\\Database\\Connection->run('alter table `ta...', Array, Object(Closure))
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement('alter table `ta...')
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(456): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create('task_proyeks', Object(Closure))
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\database\\migrations\\2024_05_08_181139_create_task_proyeks_table.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#8 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#9 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#10 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#11 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2024_05_08_1811...', Object(Closure))
+#13 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2024_05_08_1811...', Object(Closure))
+#14 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\MyProject\\\\Mo...', 1, false)
+#15 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#16 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(90): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#17 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#25 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#26 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#27 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#28 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('migrate', Array, Object(Illuminate\\Console\\OutputStyle))
+#29 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call('migrate', Array)
+#30 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#31 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#32 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#33 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#34 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#35 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#36 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#37 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#38 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#39 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#42 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `inforasia`.`task_proyeks` (errno: 150 \"Foreign key constraint is incorrectly formed\") at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:587)
+[stacktrace]
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(587): PDOStatement->execute()
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(816): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('alter table `ta...', Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(783): Illuminate\\Database\\Connection->runQueryCallback('alter table `ta...', Array, Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(576): Illuminate\\Database\\Connection->run('alter table `ta...', Array, Object(Closure))
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(110): Illuminate\\Database\\Connection->statement('alter table `ta...')
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(602): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(456): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#7 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(355): Illuminate\\Database\\Schema\\Builder->create('task_proyeks', Object(Closure))
+#8 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\database\\migrations\\2024_05_08_181139_create_task_proyeks_table.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#9 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(493): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
+#10 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->runMethod(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#11 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(419): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#12 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(Illuminate\\Database\\Migrations\\Migration@anonymous), 'up')
+#13 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(37): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#14 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(756): Illuminate\\Console\\View\\Components\\Task->render('2024_05_08_1811...', Object(Closure))
+#15 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(216): Illuminate\\Database\\Migrations\\Migrator->write('Illuminate\\\\Cons...', '2024_05_08_1811...', Object(Closure))
+#16 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(181): Illuminate\\Database\\Migrations\\Migrator->runUp('D:\\\\MyProject\\\\Mo...', 1, false)
+#17 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(124): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#18 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(90): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#19 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(633): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#20 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(83): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#21 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#22 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#23 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#24 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#25 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#26 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#27 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#28 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#29 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#30 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('migrate', Array, Object(Illuminate\\Console\\OutputStyle))
+#31 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(53): Illuminate\\Console\\Command->call('migrate', Array)
+#32 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#33 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#34 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#35 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#36 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(662): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#37 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(211): Illuminate\\Container\\Container->call(Array)
+#38 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Command\\Command.php(326): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#39 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#40 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(1096): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#41 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#42 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\symfony\\console\\Application.php(175): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#43 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(201): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#44 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#45 {main}
+"} 
+[2024-05-27 01:18:29] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 01:28:29] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 01:54:03] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 02:03:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 02:13:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 02:23:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 02:33:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 02:43:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 02:53:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 03:03:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 03:13:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-27 03:23:54] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\Compilers\Compiler.php:67
+Stack trace:
+#0 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php(96): Illuminate\View\Compilers\Compiler->__construct(Object(Illuminate\Filesystem\Filesystem), false, '', true, 'php')
+#1 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(908): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}(Object(Illuminate\Foundation\Application), Array)
+#2 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(795): Illuminate\Container\Container->build(Object(Closure))
+#3 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(961): Illuminate\Container\Container->resolve('blade.compiler', Array, true)
+#4 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Container\Container.php(731): Illuminate\Foundation\Application->resolve('blade.compiler', Array)
+#5 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\Application.php(946): Illuminate\Container\Container->make('blade.compiler', Array)
+#6 D:\MyProject\Mobile\Flutter\api-inforasia\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(120): Illuminate\Foundation\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\View...')
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67
+Stack trace:
+#0 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\ViewServiceProvider.php(96): Illuminate\\View\\Compilers\\Compiler->__construct(Object(Illuminate\\Filesystem\\Filesystem), false, '', true, 'php')
+#1 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(908): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#2 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build(Object(Closure))
+#3 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(961): Illuminate\\Container\\Container->resolve('blade.compiler', Array, true)
+#4 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(731): Illuminate\\Foundation\\Application->resolve('blade.compiler', Array)
+#5 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(946): Illuminate\\Container\\Container->make('blade.compiler', Array)
+#6 D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(120): Illuminate\\Foundation\\Application->make('blade.compiler', Array)
+#7 Command line code(1): app('Illuminate\\\\View...')
+#8 {main}
+  thrown at D:\\MyProject\\Mobile\\Flutter\\api-inforasia\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Compilers\\Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 

@@ -20,4 +20,11 @@ class proyek extends Model
     {
         return $this->hasMany(task_proyek::class);
     }
+
+    public function updateAverageNilai()
+    {
+        $averageNilai = $this->taskProyek()->avg('nilai');
+        $this->nilai = $averageNilai;
+        $this->save();
+    }
 }

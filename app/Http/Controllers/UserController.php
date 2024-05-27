@@ -31,6 +31,20 @@ class UserController extends Controller
         return response()->json(['users' => $user], 200);
     }
 
+    public function getUserData()
+    {
+        $userId = auth()->id();
+        $user = User::with('role')->find($userId);
+
+        if (!$user) {
+            return response()->json(['message' => 'Pengguna tidak ditemukan'], 404);
+        }
+
+        return response()->json(['user' => $user], 200);
+    }
+
+
+
     public function store(Request $request)
     {
         $request->validate([

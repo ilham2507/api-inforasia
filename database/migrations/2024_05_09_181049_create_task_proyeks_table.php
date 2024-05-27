@@ -21,7 +21,6 @@ return new class extends Migration
             $table->date('deadline')->nullable();
             $table->string('status')->nullable();
             $table->integer('nilai')->nullable();
-
             $table->timestamps();
         });
     }

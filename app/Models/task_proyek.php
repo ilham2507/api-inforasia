@@ -15,4 +15,22 @@ class task_proyek extends Model
     {
         return $this->hasMany(penerima_proyek::class);
     }
+
+    public function proyek()
+    {
+        return $this->belongsTo(proyek::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saved(function ($taskProyek) {
+            $taskProyek->proyek->updateAverageNilai();
+        });
+
+        static::deleted(function ($taskProyek) {
+            $taskProyek->proyek->updateAverageNilai();
+        });
+    }
 }
